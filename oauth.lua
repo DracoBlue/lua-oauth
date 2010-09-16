@@ -5,6 +5,9 @@ module(...,package.seeall)
 --     Copyright 2009-2010 by DracoBlue (JanS@DracoBlue.de)
 --                 http://dracoblue.net
 --
+-- @version 1.0
+-- @license MIT License
+--
 -- Depends:
 --   crypto
 --   base64
