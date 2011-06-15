@@ -11,7 +11,35 @@ Copyright 2009-2010 by DracoBlue (JanS@DracoBlue.de) from <http://dracoblue.net>
 
 This library is released under the terms of MIT License.
 
-## Example of a call, from a sucessful redirect
+## Example with single_token (without oauth redirect)
+    
+    oauth = require("oauth")
+    
+    -- create a new consumer, you may generate x accesstokens from it
+    consumer = oauth.newConsumer({
+        consumer_key = "SUDZIASZDASIUUDSUIDA",
+        consumer_secret = "SLDJASLKDJASLKDJASLDKASJDLSKJDASKLDJASLKDJAS",
+        request_token_url = 'http://twitter.com/oauth/request_token',
+        authorize_url= 'http://twitter.com/oauth/authorize',
+        access_token_url= 'http://twitter.com/oauth/access_token',
+        token_ready_url='http://example.org/oauth/token_ready'
+    })
+
+    -- generate a accesstoken, by the single_token at
+    -- http://dev.twitter.com/pages/oauth_single_token
+    access, msg = consumer.getAccess(
+        "fdgsdf908g7df98g7dfs9g7df98g7df9g8fdg98", -- oauth_token
+        "89fdg80df78gdasd9as0dsa0ds21kjh321kj3h12" -- oauth_token_secret 
+    )
+
+    -- now call a method!
+    return_value = access.call("method", {
+        param = 'value',
+        param2 = 'value2'
+    });
+
+
+## Example of a call, from a sucessful redirect (real oauth)
     
     oauth = require("oauth")
     
