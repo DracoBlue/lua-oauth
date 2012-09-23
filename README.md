@@ -44,13 +44,13 @@ application.
 ## Changelog
 
 * 1.1.0 (2011/10/06)
-** Use Authorization-Header instead of GET-Parameters
-** dropped curl dependency and replaced with luacurl
-** nonce is not base64 encoded anymore
-** decode parameters returned by requests
-** added examples for twitter and google
+  * Use Authorization-Header instead of GET-Parameters
+  * dropped curl dependency and replaced with luacurl
+  * nonce is not base64 encoded anymore
+  * decode parameters returned by requests
+  * added examples for twitter and google
 * 1.0.0 (2010/09/16)
-** Initial release
+  * Initial release
 
 ## Resources and further reading:
 
